@@ -4,9 +4,27 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+//使用插件
+//apply plugin: CustomPlugin
+
+//自定义插件：实现Plugin类接口，重写apply方法
+//class CustomPlugin implements Plugin<Project> {
+//    @Override
+//    void apply(Project project) {
+//        project.task('CustomPluginTask') {
+//            doLast {
+//                println "大家好,我是一个自定义插件，在这里写下你的具体功能"
+//            }
+//        }
+//    }
+//}
+
+
 // 引入buildSrc里的自定义插件
 //apply plugin: 'com.demo.plugin'
 
+// 引入duliplugin项目自定义插件
+apply plugin: 'com.demo.plugin1'
 
 android {
     compileSdkVersion 28

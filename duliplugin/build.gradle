@@ -20,7 +20,7 @@ uploadArchives {
             pom.artifactId = 'myPlugin'//这个随意起一个，发布后就是这个插件的名称
             pom.version = '1.1.9'//版本号
             //文件发布到下面目录
-            repository(url: uri('../repo'))
+            repository(url : uri(rootProject.rootDir.absolutePath+"/repo"))
         }
     }
 }
